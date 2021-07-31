@@ -4,9 +4,7 @@
   "package": "io.github.icrazyblaze.eject.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-  ],
-  "client": [
-    "ElytraMixin"
+    "ServerPlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
