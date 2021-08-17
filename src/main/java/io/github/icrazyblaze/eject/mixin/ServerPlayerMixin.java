@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ServerPlayer.class)
 public abstract class ServerPlayerMixin {
 
-    @Inject(method = "tick", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "tick", at = @At("HEAD"))
     private void injected(CallbackInfo ci) {
 
         ServerPlayer player = (ServerPlayer) (Object) this;
@@ -22,8 +22,6 @@ public abstract class ServerPlayerMixin {
         if (chestStack.is(Items.ELYTRA) && player.isFallFlying() && player.getFallFlyingTicks() > 20 && player.isShiftKeyDown()) {
             chestStack.setDamageValue(-1);
             chestStack.setDamageValue(original);
-        } else {
-            ci.cancel();
         }
     }
 }
