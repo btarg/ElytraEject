@@ -19,7 +19,7 @@ public abstract class ServerPlayerMixin {
         ItemStack chestStack = player.getItemBySlot(EquipmentSlot.CHEST);
         int original = chestStack.getDamageValue();
 
-        if (chestStack.is(Items.ELYTRA) && player.isFallFlying() && player.getFallFlyingTicks() > 20 && player.isShiftKeyDown()) {
+        if (chestStack.is(Items.ELYTRA) && player.isFallFlying() && player.getFallFlyingTicks() > 10 && player.isShiftKeyDown()) {
             chestStack.setDamageValue(-1);
             chestStack.setDamageValue(original);
         }
