@@ -4,8 +4,7 @@
   "package": "io.github.icrazyblaze.eject.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "LivingEntityMixin",
-    "EntityAccessor"
+    "LivingEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
